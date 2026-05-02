@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roblox Profile Redirect</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    input {
+      padding: 12px;
+      width: 250px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔗 Roblox Profile Finder</h1>
+
+  <input type="text" id="username" placeholder="Enter Username">
+  <button onclick="go()">Go</button>
+
+<script>
+function go() {
+  const username = document.getElementById("username").value.trim();
+
+  if (!username) {
+    alert("Enter username");
+    return;
+  }
+
+  // This works without API
+  window.location.href = `https://www.roblox.com/search/users?keyword=${username}`;
+}
+</script>
+
+</body>
+</html>
